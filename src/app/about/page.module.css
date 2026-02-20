@@ -1,0 +1,76 @@
+.hero {
+  position: relative; min-height: 55vh; display: flex; align-items: flex-end;
+}
+.heroBg { object-fit: cover; }
+.heroOverlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.82), rgba(0,0,0,0.25));
+}
+.heroContent {
+  position: relative; z-index: 2;
+  padding: 120px 24px 72px;
+  display: flex; flex-direction: column; gap: 16px;
+  max-width: 700px;
+}
+.heroEyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #f97316; }
+.heroTitle { font-size: clamp(36px, 5vw, 64px); font-weight: 900; letter-spacing: -0.03em; color: #fff; line-height: 1.05; }
+.heroSub { font-size: 17px; color: rgba(255,255,255,0.8); line-height: 1.65; max-width: 560px; }
+
+/* Story */
+.story { padding: 100px 0; background: #fff; }
+.storyInner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.storyImg { position: relative; height: 520px; border-radius: 24px; overflow: hidden; }
+.storyPhoto { object-fit: cover; }
+.storyText { display: flex; flex-direction: column; gap: 16px; }
+
+.licenseBox {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: #fff4ed; border-radius: 16px; padding: 20px 24px; margin-top: 8px;
+  border-left: 4px solid #f97316;
+}
+.licenseIcon { font-size: 28px; flex-shrink: 0; }
+.licenseBox strong { display: block; font-size: 16px; font-weight: 700; color: #111; margin-bottom: 4px; }
+.licenseBox p { font-size: 14px; color: #4b5563; }
+
+/* Stats */
+.statsSection { background: #111; padding: 56px 0; }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.statCard { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.statCard strong { font-size: clamp(28px, 3vw, 44px); font-weight: 900; color: #fff; letter-spacing: -0.02em; }
+.statCard span { font-size: 13px; color: #9ca3af; font-weight: 500; }
+
+/* Values */
+.values { padding: 100px 0; background: #f9fafb; }
+.valueGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.valueCard { padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; }
+.valueIcon { font-size: 32px; }
+.valueTitle { font-size: 18px; font-weight: 700; color: #111; }
+.valueDesc { font-size: 14px; color: #6b7280; line-height: 1.65; }
+
+/* Team */
+.team { padding: 100px 0; background: #fff; }
+.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.teamCard {
+  padding: 32px 24px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.teamAvatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: #1a2744; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; font-weight: 800;
+}
+.teamName { font-size: 17px; font-weight: 700; color: #111; }
+.teamRole { font-size: 14px; color: #6b7280; }
+
+@media (max-width: 900px) {
+  .storyInner { grid-template-columns: 1fr; gap: 40px; }
+  .storyImg { height: 320px; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .valueGrid { grid-template-columns: repeat(2, 1fr); }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .valueGrid { grid-template-columns: 1fr; }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+}

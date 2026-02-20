@@ -1,0 +1,116 @@
+.hero {
+  position: relative; min-height: 60vh; display: flex; align-items: flex-end;
+}
+.heroBg { object-fit: cover; }
+.heroOverlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(26,39,68,0.92), rgba(26,39,68,0.4));
+}
+.heroContent {
+  position: relative; z-index: 2;
+  padding: 120px 24px 72px;
+  display: flex; flex-direction: column; gap: 16px;
+  max-width: 700px;
+}
+.heroEyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #f97316; }
+.heroTitle { font-size: clamp(36px, 5vw, 64px); font-weight: 900; letter-spacing: -0.03em; color: #fff; line-height: 1.05; }
+.heroSub { font-size: 17px; color: rgba(255,255,255,0.8); line-height: 1.65; max-width: 560px; }
+.heroCtas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+/* Contact grid */
+.contactSection { padding: 80px 0; background: #f9fafb; }
+.contactGrid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Info col */
+.infoCol { display: flex; flex-direction: column; gap: 16px; }
+.infoTitle { font-size: 24px; font-weight: 800; color: #111; margin-bottom: 8px; }
+
+.infoCard {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: #fff; border: 1px solid #e5e7eb;
+  border-radius: 14px; padding: 18px 20px;
+  transition: box-shadow 0.2s;
+}
+.infoCard:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.infoIcon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+.infoLabel { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #9ca3af; margin-bottom: 4px; }
+.infoValue { font-size: 15px; font-weight: 700; color: #111; text-decoration: none; transition: color 0.2s; }
+a.infoValue:hover { color: #f97316; }
+
+.licBadge {
+  display: flex; align-items: center; gap: 12px;
+  background: #e8edf7; border-radius: 12px; padding: 16px 20px;
+  font-size: 14px; color: #1a2744;
+}
+.licBadge strong { display: block; }
+
+/* Form card */
+.formCard {
+  background: #fff; border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+}
+.formHeader { background: #1a2744; padding: 32px 36px; color: #fff; }
+.formHeader h3 { font-size: 24px; font-weight: 800; }
+.formHeader p { font-size: 15px; color: rgba(255,255,255,0.65); margin-top: 6px; }
+
+.form { padding: 32px 36px; display: flex; flex-direction: column; gap: 20px; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.formGroup { display: flex; flex-direction: column; gap: 6px; }
+.formGroup label { font-size: 13px; font-weight: 600; color: #374151; }
+.formGroup input, .formGroup select, .formGroup textarea {
+  border: 1.5px solid #e5e7eb; border-radius: 10px;
+  padding: 12px 16px; font-size: 15px; font-family: inherit;
+  outline: none; background: #fff; color: #111;
+  transition: border-color 0.2s;
+}
+.formGroup input:focus, .formGroup select:focus, .formGroup textarea:focus {
+  border-color: #1a2744;
+}
+.formGroup textarea { resize: vertical; }
+
+.formBtn {
+  width: 100%; background: #f97316; color: #fff;
+  border: none; border-radius: 12px; padding: 16px;
+  font-size: 16px; font-weight: 700; font-family: inherit;
+  cursor: pointer; transition: background 0.2s;
+}
+.formBtn:hover { background: #ea6c0a; }
+.formNote { text-align: center; font-size: 14px; color: #9ca3af; }
+.formPhone { color: #1a2744; font-weight: 700; }
+
+.formSent { padding: 48px 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.sentIcon { font-size: 56px; }
+.formSent h4 { font-size: 24px; font-weight: 800; color: #111; }
+.formSent p { font-size: 16px; color: #6b7280; }
+.formSent a { color: #f97316; font-weight: 700; }
+
+/* FAQ */
+.faqSection { padding: 80px 0; background: #fff; }
+.faqItem { border-bottom: 1px solid #e5e7eb; }
+.faqQ {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; background: none; border: none;
+  padding: 20px 0; font-size: 16px; font-weight: 700; color: #111;
+  cursor: pointer; text-align: left; gap: 16px; font-family: inherit;
+}
+.faqChevron { flex-shrink: 0; transition: transform 0.3s; }
+.faqOpen .faqChevron { transform: rotate(180deg); }
+.faqA { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+.faqOpen .faqA { max-height: 200px; }
+.faqA p { padding: 0 0 20px; font-size: 15px; color: #6b7280; line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .contactGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 580px) {
+  .formRow { grid-template-columns: 1fr; }
+  .form { padding: 24px 20px; }
+  .formHeader { padding: 24px 20px; }
+}

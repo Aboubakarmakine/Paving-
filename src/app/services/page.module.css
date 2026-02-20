@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+}
+.heroBg { object-fit: cover; object-position: center; }
+.heroOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+}
+.heroContent {
+  position: relative; z-index: 2;
+  padding: 120px 24px 72px;
+  display: flex; flex-direction: column; gap: 16px;
+  max-width: 700px;
+}
+.heroEyebrow {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #f97316;
+}
+.heroTitle {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900; letter-spacing: -0.03em;
+  color: #fff; line-height: 1.05;
+}
+.heroSub {
+  font-size: 17px; color: rgba(255,255,255,0.8);
+  line-height: 1.65; max-width: 560px;
+}
+
+/* Service rows */
+.servicesList { padding: 100px 0; }
+
+.serviceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+
+.serviceRowReverse { direction: rtl; }
+.serviceRowReverse > * { direction: ltr; }
+
+.serviceImgWrap {
+  position: relative;
+  min-height: 400px;
+}
+
+.serviceImg { object-fit: cover; }
+
+.serviceText {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.featureList {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+  margin: 8px 0;
+}
+
+.featureList li {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; font-weight: 500; color: #374151;
+}
+
+.featureCheck {
+  width: 24px; height: 24px;
+  background: #1a2744; color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Trust bar */
+.trustBar {
+  background: #111;
+  padding: 48px 0;
+}
+
+.trustInner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.trustItem {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; font-weight: 600; color: #fff;
+}
+
+.trustIcon { font-size: 24px; }
+
+@media (max-width: 900px) {
+  .serviceRow { grid-template-columns: 1fr; direction: ltr; }
+  .serviceImgWrap { min-height: 280px; }
+  .serviceText { padding: 36px 28px; }
+  .trustInner { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .trustInner { grid-template-columns: 1fr; }
+}

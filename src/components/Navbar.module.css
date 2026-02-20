@@ -1,0 +1,190 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 24px;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoImg {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  /* Strong shadow/outline so navy badge pops on dark navbar */
+  filter:
+    drop-shadow(0 0 2px rgba(255,255,255,0.9))
+    drop-shadow(0 2px 12px rgba(0,0,0,0.6));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo:hover .logoImg {
+  transform: scale(1.06);
+  filter:
+    drop-shadow(0 0 4px rgba(255,255,255,1))
+    drop-shadow(0 4px 16px rgba(0,0,0,0.7));
+}
+
+.logoTextBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logoLine1 {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.logoLine2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.logoLine3 {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.header.scrolled .logoLine1 { color: #1a2744; text-shadow: none; }
+.header.scrolled .logoLine2 { color: #374151; }
+.header.scrolled .logoLine3 { color: #9ca3af; }
+
+/* ── Nav ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.navLink:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.header.scrolled .navLink { color: #374151; }
+.header.scrolled .navLink:hover { color: #1a2744; background: #f3f4f6; }
+
+.active { color: #f97316 !important; }
+.header.scrolled .active { color: #f97316 !important; }
+
+/* ── CTA area ── */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  transition: color 0.2s;
+}
+.phone:hover { color: #fff; }
+.header.scrolled .phone { color: #1a2744; }
+
+/* ── Burger ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.header.scrolled .burger span { background: #111; }
+.burgerOpen { opacity: 0 !important; }
+.burger span:first-child.burgerOpen { opacity: 1 !important; transform: translateY(7px) rotate(45deg); }
+.burger span:last-child.burgerOpen { opacity: 1 !important; transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile menu ── */
+.mobile {
+  position: fixed;
+  inset: 0;
+  background: #1a2744;
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 120px 40px 40px;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobileOpen {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+.mobileLink {
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.7);
+  padding: 8px 0;
+  letter-spacing: -0.02em;
+  transition: color 0.2s;
+}
+.mobileLink:hover { color: #f97316; }
+
+@media (max-width: 900px) {
+  .nav, .cta { display: none; }
+  .burger { display: flex; }
+}
