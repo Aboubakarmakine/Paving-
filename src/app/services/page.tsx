@@ -15,7 +15,7 @@ const services = [
     title: 'Driveway Paving',
     desc: 'Whether you need a brand-new driveway or want to replace an old one, we handle the whole job — grading, base prep, compaction, and clean edges. Most driveways we knock out in a day.',
     features: ['New installs & full replacements', 'Proper base prep & compaction', 'Clean edging and drainage grading', 'Residential & commercial driveways'],
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85',
+    img: '/service-driveway.jpg',
     color: '#f9fafb',
   },
   {
@@ -29,14 +29,14 @@ const services = [
     title: 'Sealcoating & Repairs',
     desc: 'Got cracks? Don\'t wait until they\'re potholes. Sealcoating now saves you money on a full repave later. We fill the cracks, seal the surface, and it\'s usually done in one visit.',
     features: ['Crack filling & pothole repair', 'Professional sealcoating', 'UV & moisture protection', 'Maintenance plans available'],
-    img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=85',
+    img: '/service-sealcoating.jpg',
     color: '#f9fafb',
   },
   {
     title: 'Concrete Work',
     desc: 'Same crew, same standard. We pour concrete sidewalks, aprons, curbs, and steps. If your project needs both asphalt and concrete, we handle it all in one job.',
     features: ['Sidewalks & walkways', 'Driveway aprons & transitions', 'Curbing & edging', 'Steps & stoops'],
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=85',
+    img: '/service-concrete.jpg',
     color: '#fff',
   },
 ];
@@ -50,7 +50,7 @@ export default function ServicesPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85"
+          src="/services-hero.jpg"
           alt="Paving services Maryland"
           fill
           priority
