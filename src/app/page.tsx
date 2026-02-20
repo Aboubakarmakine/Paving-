@@ -302,12 +302,12 @@ export default function Home() {
           </div>
           <div className={styles.gallery}>
             {[
-              'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80',
-              'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80',
-              'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=500&q=80',
-              'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&q=80',
-              'https://images.unsplash.com/photo-1510587105668-bee130f2f9b3?w=500&q=80',
-              'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&q=80',
+              '/proj-driveway-residential.jpg',
+              '/proj-parking-lot.jpg',
+              '/proj-sealcoating.jpg',
+              '/proj-paving-crew.jpg',
+              '/proj-crack-repair.jpg',
+              '/proj-concrete.jpg',
             ].map((src, i) => (
               <div key={i} className={`card ${styles.galleryItem} ${i === 1 ? styles.galleryTall : ''}`}>
                 <Image src={src} alt={`Project ${i+1}`} fill className={styles.galleryPhoto} unoptimized />
