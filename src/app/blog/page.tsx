@@ -18,7 +18,7 @@ const posts = [
     date: 'Feb 10, 2026',
     category: 'Sealcoating',
     readTime: '4 min read',
-    img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
+    img: '/service-sealcoating.jpg',
   },
   {
     slug: 'new-driveway-vs-resurface',
@@ -27,7 +27,7 @@ const posts = [
     date: 'Jan 28, 2026',
     category: 'Driveways',
     readTime: '5 min read',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    img: '/service-driveway.jpg',
   },
   {
     slug: 'commercial-parking-lot-maintenance',
@@ -36,7 +36,7 @@ const posts = [
     date: 'Jan 15, 2026',
     category: 'Commercial',
     readTime: '6 min read',
-    img: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&q=80',
+    img: '/proj-parking-lot.jpg',
   },
   {
     slug: 'crack-filling-vs-patching',
@@ -45,7 +45,7 @@ const posts = [
     date: 'Jan 5, 2026',
     category: 'Repairs',
     readTime: '4 min read',
-    img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
+    img: '/proj-crack-repair.jpg',
   },
   {
     slug: 'maryland-winter-asphalt',
@@ -54,7 +54,7 @@ const posts = [
     date: 'Dec 20, 2025',
     category: 'Maintenance',
     readTime: '5 min read',
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
+    img: '/blog-winter.jpg',
   },
   {
     slug: 'how-long-does-asphalt-last',
@@ -63,7 +63,7 @@ const posts = [
     date: 'Dec 8, 2025',
     category: 'Education',
     readTime: '6 min read',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+    img: '/blog-hero.jpg',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function BlogPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85"
+          src="/services-hero.jpg"
           alt="Paving tips and guides"
           fill priority unoptimized
           className={styles.heroBg}
