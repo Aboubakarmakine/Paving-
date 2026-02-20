@@ -102,7 +102,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85"
+          src="/services-hero.jpg"
           alt="Fresh asphalt driveway paving"
           fill priority
           className={styles.heroBg}
@@ -266,7 +266,7 @@ export default function Home() {
       {/* ── CTA BANNER ── */}
       <section className={styles.phoneBanner}>
         <Image
-          src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80"
+          src="/service-concrete.jpg"
           alt="Paving crew at work"
           fill
           className={styles.phoneBannerBg}
@@ -360,7 +360,7 @@ export default function Home() {
         <div className={`container ${styles.faqInner}`}>
           <div className={styles.faqLeft}>
             <Image
-              src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80"
+              src="/service-sealcoating.jpg"
               alt="Asphalt paving crew"
               fill
               className={styles.faqPhoto}
