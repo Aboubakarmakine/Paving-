@@ -11,7 +11,7 @@ const services = [
     title: 'Driveway Paving',
     desc: 'New installs or full replacements. We handle the base prep, grading, and compaction right — that\'s why our driveways last.',
     icon: '🛣️',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    img: '/service-driveway.jpg',
   },
   {
     title: 'Parking Lots',
@@ -23,13 +23,13 @@ const services = [
     title: 'Sealcoating & Repairs',
     desc: 'Cracks turn into potholes fast. Seal it now and save yourself a full repave later. We\'re quick and we don\'t cut corners.',
     icon: '🔧',
-    img: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
+    img: '/service-sealcoating.jpg',
   },
   {
     title: 'Concrete Work',
     desc: 'Sidewalks, curbs, aprons, steps. We work with concrete too — same crew, same standard of work.',
     icon: '🏗️',
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
+    img: '/service-concrete.jpg',
   },
 ];
 
