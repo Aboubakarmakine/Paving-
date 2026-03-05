@@ -50,7 +50,7 @@ export default function ServicesPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/enhanced_IMG_0594.png"
+          src="/services_hero_no_people.png"
           alt="Paving services Maryland"
           fill
           priority
