@@ -12,55 +12,55 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    src: '/proj-driveway-residential.jpg',
+    src: '/enhanced_IMG_2588.png',
     label: 'Residential Driveway — Annapolis, MD',
     category: 'Driveway',
     detail: 'Full removal & new asphalt install',
   },
   {
-    src: '/proj-parking-lot.jpg',
+    src: '/enhanced_IMG_1032.png',
     label: 'Commercial Parking Lot — Glen Burnie, MD',
     category: 'Commercial',
     detail: 'Full pave with line striping',
   },
   {
-    src: '/proj-driveway-estate.jpg',
+    src: '/recent-2.png',
     label: 'Private Driveway — Arnold, MD',
     category: 'Driveway',
     detail: 'New install, long curved driveway',
   },
   {
-    src: '/proj-sealcoating.jpg',
+    src: '/enhanced_IMG_2629.png',
     label: 'Sealcoating — Pasadena, MD',
     category: 'Sealcoating',
     detail: 'Full sealcoat + crack filling',
   },
   {
-    src: '/proj-crack-repair.jpg',
+    src: '/enhanced_IMG_1509.png',
     label: 'Crack Repair — Crownsville, MD',
     category: 'Repairs',
     detail: 'Pothole & crack fill, same-day service',
   },
   {
-    src: '/proj-parking-office.jpg',
+    src: '/recent-3.png',
     label: 'Office Parking Lot — Hanover, MD',
     category: 'Commercial',
     detail: 'Fresh overlay with new striping',
   },
   {
-    src: '/proj-paving-crew.jpg',
+    src: '/enhanced_recent_1.png',
     label: 'Street Paving — Severna Park, MD',
     category: 'Asphalt',
     detail: 'Full-depth asphalt installation',
   },
   {
-    src: '/proj-concrete.jpg',
+    src: '/enhanced_93600268.png',
     label: 'Concrete Apron — Millersville, MD',
     category: 'Concrete',
     detail: 'Driveway apron & sidewalk pour',
   },
   {
-    src: '/proj-driveway-finished.jpg',
+    src: '/70836155096__B0CD074C-AECD-40B6-B3F4-81FC9A36BDB2.jpeg',
     label: 'New Driveway — Odenton, MD',
     category: 'Driveway',
     detail: 'Complete install, same-week turnaround',
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/proj-parking-lot.jpg"
+          src="/enhanced_IMG_1032.png"
           alt="Commercial parking lot paving Maryland"
           fill priority
           className={styles.heroBg}

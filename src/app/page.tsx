@@ -11,25 +11,25 @@ const services = [
     title: 'Driveway Paving',
     desc: 'New installs or full replacements. We handle the base prep, grading, and compaction right — that\'s why our driveways last.',
     icon: '🛣️',
-    img: '/service-driveway.jpg',
+    img: '/enhanced_IMG_0187.png',
   },
   {
     title: 'Parking Lots',
     desc: 'We\'ve paved lots for churches, HOAs, strip malls, and warehouses. Full install, patching, or just striping — we do it all.',
     icon: '🏢',
-    img: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&q=80',
+    img: '/enhanced_IMG_1032.png',
   },
   {
     title: 'Sealcoating & Repairs',
     desc: 'Cracks turn into potholes fast. Seal it now and save yourself a full repave later. We\'re quick and we don\'t cut corners.',
     icon: '🔧',
-    img: '/service-sealcoating.jpg',
+    img: '/enhanced_IMG_0189.png',
   },
   {
     title: 'Concrete Work',
     desc: 'Sidewalks, curbs, aprons, steps. We work with concrete too — same crew, same standard of work.',
     icon: '🏗️',
-    img: '/service-concrete.jpg',
+    img: '/enhanced_IMG_0594.png',
   },
 ];
 
@@ -102,7 +102,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/services-hero.jpg"
+          src="/hero-driveway-house.png"
           alt="Fresh asphalt driveway paving"
           fill priority
           className={styles.heroBg}
@@ -266,7 +266,7 @@ export default function Home() {
       {/* ── CTA BANNER ── */}
       <section className={styles.phoneBanner}>
         <Image
-          src="/service-concrete.jpg"
+          src="/enhanced_IMG_0594.png"
           alt="Paving crew at work"
           fill
           className={styles.phoneBannerBg}
@@ -302,12 +302,12 @@ export default function Home() {
           </div>
           <div className={styles.gallery}>
             {[
-              '/proj-driveway-residential.jpg',
-              '/proj-parking-lot.jpg',
-              '/proj-sealcoating.jpg',
-              '/proj-paving-crew.jpg',
-              '/proj-crack-repair.jpg',
-              '/proj-concrete.jpg',
+              '/enhanced_IMG_2588.png',
+              '/enhanced_IMG_1032.png',
+              '/enhanced_IMG_2629.png',
+              '/enhanced_recent_1.png',
+              '/enhanced_IMG_1509.png',
+              '/enhanced_93600268.png',
             ].map((src, i) => (
               <div key={i} className={`card ${styles.galleryItem} ${i === 1 ? styles.galleryTall : ''}`}>
                 <Image src={src} alt={`Project ${i+1}`} fill className={styles.galleryPhoto} unoptimized />
@@ -360,7 +360,7 @@ export default function Home() {
         <div className={`container ${styles.faqInner}`}>
           <div className={styles.faqLeft}>
             <Image
-              src="/service-sealcoating.jpg"
+              src="/enhanced_IMG_0189.png"
               alt="Asphalt paving crew"
               fill
               className={styles.faqPhoto}

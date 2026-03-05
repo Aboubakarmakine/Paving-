@@ -23,7 +23,7 @@ const posts: Record<string, {
     date: 'Feb 10, 2026',
     category: 'Sealcoating',
     readTime: '4 min read',
-    img: '/service-sealcoating.jpg',
+    img: '/enhanced_IMG_0189.png',
     body: [
       { text: "Sealcoating is like sunscreen for your driveway. Once asphalt is laid and cured, it starts to oxidize — the sun dries out the oils in the mix, causing it to shrink, crack, and fade. Sealcoating slows all of that down significantly." },
       { heading: 'The right timing', text: "New asphalt should cure for at least 6–12 months before first sealcoat. After that, plan on sealing every 2–3 years depending on traffic, sun exposure, and how well you maintain it. Maryland summers are tough on asphalt — UV and heat accelerate oxidation fast." },
@@ -39,7 +39,7 @@ const posts: Record<string, {
     date: 'Jan 28, 2026',
     category: 'Driveways',
     readTime: '5 min read',
-    img: '/service-driveway.jpg',
+    img: '/enhanced_IMG_0187.png',
     body: [
       { text: "One of the most common questions we get is whether a driveway needs full replacement or if resurfacing will do the job. The honest answer depends on the condition of what's already there." },
       { heading: 'Resurfacing (overlay)', text: "Resurfacing means we grind down or pave over the existing asphalt with a fresh layer — usually 1.5 to 2 inches thick. It works well if the base is still solid. If your driveway has surface cracks, minor potholes, or is just rough and faded, resurfacing is usually the right call. It's faster and costs significantly less than a full tear-out." },
@@ -55,7 +55,7 @@ const posts: Record<string, {
     date: 'Jan 15, 2026',
     category: 'Commercial',
     readTime: '6 min read',
-    img: '/proj-parking-lot.jpg',
+    img: '/enhanced_IMG_1032.png',
     body: [
       { text: "A well-maintained parking lot tells your customers they're in good hands before they even walk through the door. A cracked, faded lot with faded striping does the opposite — it makes your business look run-down, even if everything inside is top-notch." },
       { heading: 'Spring (March–May)', text: "Post-winter inspection is critical. Maryland winters are rough — salt, plowing, and freeze-thaw cycles do major damage. Walk the lot and note any new cracks, heaves, or pothole formation. Address them before they spread." },
@@ -72,7 +72,7 @@ const posts: Record<string, {
     date: 'Jan 5, 2026',
     category: 'Repairs',
     readTime: '4 min read',
-    img: '/proj-crack-repair.jpg',
+    img: '/enhanced_IMG_1509.png',
     body: [
       { text: "Asphalt repairs aren't one-size-fits-all. The right fix depends on what type of damage you have. Getting it wrong means spending money on a repair that doesn't last." },
       { heading: 'Crack filling', text: "Crack filling uses a hot-pour rubberized compound to seal cracks that are between ¼ inch and 1 inch wide. It's designed for cracks that are still structurally sound — meaning the asphalt on both sides is stable. The sealant keeps water out, which is the main goal. It's fast, affordable, and very effective when done at the right stage." },
@@ -88,7 +88,7 @@ const posts: Record<string, {
     date: 'Dec 20, 2025',
     category: 'Maintenance',
     readTime: '5 min read',
-    img: '/blog-winter.jpg',
+    img: '/enhanced_IMG_1792.png',
     body: [
       { text: "Maryland sits in a tough spot climatically. We get enough winter to cause serious freeze-thaw damage but rarely enough to keep crews off the roads, which means asphalt takes a beating from both weather and heavy salt/plow use." },
       { heading: 'Freeze-thaw cycles', text: "Water finds its way into small cracks in the asphalt. When temperatures drop below freezing, that water expands — up to 9% in volume. That expansion widens cracks from the inside. Repeat this dozens of times over a Maryland winter and those hairline cracks become full potholes by March." },
@@ -105,7 +105,7 @@ const posts: Record<string, {
     date: 'Dec 8, 2025',
     category: 'Education',
     readTime: '6 min read',
-    img: '/blog-hero.jpg',
+    img: '/enhanced_IMG_2426.png',
     body: [
       { text: "The answer you'll get from most contractors is 20–30 years. The honest answer is: it depends entirely on how it was installed, how it's maintained, and what climate it's exposed to. We've seen 10-year-old driveways that look like they're 30, and 20-year-old driveways that are still in great shape." },
       { heading: 'Installation quality', text: "The single biggest factor is the base. Asphalt is only as good as what's underneath it. A proper base — compacted stone gravel at the right depth — is what gives asphalt its structural strength. Skip that, and no amount of maintenance will save you. Always ask a contractor what base preparation they include." },

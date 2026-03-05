@@ -18,7 +18,7 @@ const posts = [
     date: 'Feb 10, 2026',
     category: 'Sealcoating',
     readTime: '4 min read',
-    img: '/service-sealcoating.jpg',
+    img: '/enhanced_IMG_0189.png',
   },
   {
     slug: 'new-driveway-vs-resurface',
@@ -27,7 +27,7 @@ const posts = [
     date: 'Jan 28, 2026',
     category: 'Driveways',
     readTime: '5 min read',
-    img: '/service-driveway.jpg',
+    img: '/enhanced_IMG_0187.png',
   },
   {
     slug: 'commercial-parking-lot-maintenance',
@@ -36,7 +36,7 @@ const posts = [
     date: 'Jan 15, 2026',
     category: 'Commercial',
     readTime: '6 min read',
-    img: '/proj-parking-lot.jpg',
+    img: '/enhanced_IMG_1032.png',
   },
   {
     slug: 'crack-filling-vs-patching',
@@ -45,7 +45,7 @@ const posts = [
     date: 'Jan 5, 2026',
     category: 'Repairs',
     readTime: '4 min read',
-    img: '/proj-crack-repair.jpg',
+    img: '/enhanced_IMG_1509.png',
   },
   {
     slug: 'maryland-winter-asphalt',
@@ -54,7 +54,7 @@ const posts = [
     date: 'Dec 20, 2025',
     category: 'Maintenance',
     readTime: '5 min read',
-    img: '/blog-winter.jpg',
+    img: '/enhanced_IMG_1792.png',
   },
   {
     slug: 'how-long-does-asphalt-last',
@@ -63,7 +63,7 @@ const posts = [
     date: 'Dec 8, 2025',
     category: 'Education',
     readTime: '6 min read',
-    img: '/blog-hero.jpg',
+    img: '/enhanced_IMG_2426.png',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function BlogPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/services-hero.jpg"
+          src="/enhanced_IMG_2426.png"
           alt="Paving tips and guides"
           fill priority unoptimized
           className={styles.heroBg}

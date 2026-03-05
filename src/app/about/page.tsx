@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&q=85"
+          src="/enhanced_93600268.png"
           alt="About J & Son Paving LLC"
           fill priority
           className={styles.heroBg}
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className={`container ${styles.storyInner}`}>
           <div className={styles.storyImg}>
             <Image
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+              src="/enhanced_recent_1.png"
               alt="Our paving work"
               fill
               className={styles.storyPhoto}

@@ -15,28 +15,28 @@ const services = [
     title: 'Driveway Paving',
     desc: 'Whether you need a brand-new driveway or want to replace an old one, we handle the whole job — grading, base prep, compaction, and clean edges. Most driveways we knock out in a day.',
     features: ['New installs & full replacements', 'Proper base prep & compaction', 'Clean edging and drainage grading', 'Residential & commercial driveways'],
-    img: '/service-driveway.jpg',
+    img: '/enhanced_IMG_0187.png',
     color: '#f9fafb',
   },
   {
     title: 'Parking Lots',
     desc: 'We\'ve paved parking lots for churches, strip malls, HOAs, schools, and warehouses across Maryland. Full installs, overlays, patching, or just striping — we do it all and we do it clean.',
     features: ['Full installs & resurfacing', 'Line striping & re-striping', 'Speed bumps & concrete curbing', 'ADA accessibility layouts'],
-    img: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&q=85',
+    img: '/enhanced_IMG_1032.png',
     color: '#fff',
   },
   {
     title: 'Sealcoating & Repairs',
     desc: 'Got cracks? Don\'t wait until they\'re potholes. Sealcoating now saves you money on a full repave later. We fill the cracks, seal the surface, and it\'s usually done in one visit.',
     features: ['Crack filling & pothole repair', 'Professional sealcoating', 'UV & moisture protection', 'Maintenance plans available'],
-    img: '/service-sealcoating.jpg',
+    img: '/enhanced_IMG_0189.png',
     color: '#f9fafb',
   },
   {
     title: 'Concrete Work',
     desc: 'Same crew, same standard. We pour concrete sidewalks, aprons, curbs, and steps. If your project needs both asphalt and concrete, we handle it all in one job.',
     features: ['Sidewalks & walkways', 'Driveway aprons & transitions', 'Curbing & edging', 'Steps & stoops'],
-    img: '/service-concrete.jpg',
+    img: '/enhanced_IMG_0594.png',
     color: '#fff',
   },
 ];
@@ -50,7 +50,7 @@ export default function ServicesPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/services-hero.jpg"
+          src="/enhanced_IMG_0594.png"
           alt="Paving services Maryland"
           fill
           priority
