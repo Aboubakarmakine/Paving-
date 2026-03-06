@@ -49,8 +49,9 @@
 
 /* Team */
 .team { padding: 100px 0; background: #fff; }
-.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.teamGrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
 .teamCard {
+  flex: 1 1 250px; max-width: 280px;
   padding: 32px 24px; text-align: center;
   display: flex; flex-direction: column; align-items: center; gap: 12px;
 }
@@ -68,9 +69,7 @@
   .storyImg { height: 320px; }
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
   .valueGrid { grid-template-columns: repeat(2, 1fr); }
-  .teamGrid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 580px) {
   .valueGrid { grid-template-columns: 1fr; }
-  .teamGrid { grid-template-columns: repeat(2, 1fr); }
 }
