@@ -79,7 +79,7 @@ export default function BlogPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <Image
-          src="/enhanced_IMG_2426.png"
+          src="/hero-driveway-house.png"
           alt="Paving tips and guides"
           fill priority unoptimized
           className={styles.heroBg}
