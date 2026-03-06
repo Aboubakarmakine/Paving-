@@ -20,6 +20,39 @@ export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', address: '', service: '', message: '' });
   const [sent, setSent] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/jandsonpavingllc@yahoo.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: "New Estimate Request (Contact Page)",
+          name: form.name,
+          phone: form.phone,
+          email: form.email || "Not provided",
+          address: form.address || "Not provided",
+          service: form.service || "Not specified",
+          message: form.message || "Not provided",
+        })
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        alert("There was an issue sending your request. Please call us directly at (443) 875-1714.");
+      }
+    } catch (err) {
+      alert("Connection error. Please call us directly at (443) 875-1714.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -120,7 +153,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form
-                onSubmit={e => { e.preventDefault(); setSent(true); }}
+                onSubmit={handleSubmit}
                 className={styles.form}
               >
                 <div className={styles.formRow}>
@@ -163,8 +196,8 @@ export default function ContactPage() {
                   <textarea rows={4} placeholder="Describe your project — size, current condition, anything else we should know…"
                     value={form.message} onChange={e => setForm(p => ({...p, message: e.target.value}))} />
                 </div>
-                <button type="submit" className={styles.formBtn}>
-                  Send Request for Free Estimate →
+                <button type="submit" className={styles.formBtn} disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending Request...' : 'Send Request for Free Estimate →'}
                 </button>
                 <p className={styles.formNote}>
                   Or call us directly: <a href="tel:4438751714" className={styles.formPhone}>(443) 875-1714</a>

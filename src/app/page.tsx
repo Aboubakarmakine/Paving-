@@ -93,6 +93,37 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/jandsonpavingllc@yahoo.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: "New Estimate Request (Homepage)",
+          name: form.name,
+          phone: form.phone,
+          email: form.email || "Not provided",
+          message: form.message || "Not provided",
+        })
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        alert("There was an issue sending your request. Please call us directly at (443) 875-1714.");
+      }
+    } catch (err) {
+      alert("Connection error. Please call us directly at (443) 875-1714.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -164,8 +195,8 @@ export default function Home() {
                 <p>Got it! We'll be in touch shortly.<br/>Or call us now: <a href="tel:4438751714">(443) 875-1714</a></p>
               </div>
             ) : (
-              <form onSubmit={e => { e.preventDefault(); setSent(true); }} className={styles.form}>
-                <input type="text" placeholder="Your name" value={form.name}
+              <form onSubmit={handleSubmit} className={styles.form}>
+                <input required type="text" placeholder="Your name" value={form.name}
                   onChange={e => setForm(p => ({...p, name: e.target.value}))} />
                 <input type="tel" placeholder="Phone number" value={form.phone}
                   onChange={e => setForm(p => ({...p, phone: e.target.value}))} />
@@ -173,8 +204,8 @@ export default function Home() {
                   onChange={e => setForm(p => ({...p, email: e.target.value}))} />
                 <textarea placeholder="Tell us about your project — driveway, parking lot, repairs, etc." rows={3} value={form.message}
                   onChange={e => setForm(p => ({...p, message: e.target.value}))} />
-                <button type="submit" className={styles.formBtn}>
-                  Send Request
+                <button type="submit" className={styles.formBtn} disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send Request'}
                 </button>
                 <a href="tel:4438751714" className={styles.formCall}>
                   Or just call: (443) 875-1714
