@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { name: 'James Sr.', role: 'Founder & CEO', avatar: 'J' },
+  { name: 'Jose Hernandez', role: 'Founder & CEO', avatar: 'J' },
   { name: 'Jason Jr.', role: 'Operations Manager', avatar: 'J' },
   { name: 'Marcus Williams', role: 'Lead Foreman', avatar: 'M' },
   { name: 'Tony Garcia', role: 'Senior Paving Tech', avatar: 'T' },
