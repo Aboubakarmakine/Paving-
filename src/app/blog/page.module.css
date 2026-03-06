@@ -1,7 +1,7 @@
 .hero {
   position: relative; min-height: 55vh; display: flex; align-items: flex-end;
 }
-.heroBg { object-fit: cover; }
+.heroBg { object-fit: cover; object-position: center 25%; }
 .heroOverlay {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(26,39,68,0.9), rgba(26,39,68,0.35));
