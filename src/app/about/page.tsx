@@ -12,9 +12,7 @@ export const metadata: Metadata = {
 
 const team = [
   { name: 'Jose Hernandez', role: 'Founder & CEO', avatar: 'J' },
-  { name: 'Jason Jr.', role: 'Operations Manager', avatar: 'J' },
-  { name: 'Marcus Williams', role: 'Lead Foreman', avatar: 'M' },
-  { name: 'Tony Garcia', role: 'Senior Paving Tech', avatar: 'T' },
+  { name: 'Henry Hernandez', role: 'Operations Manager', avatar: 'H' },
 ];
 
 export default function AboutPage() {
