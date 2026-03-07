@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} JosCo Paving LLC. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} J & Son Paving LLC. All rights reserved.</p>
           <p>MHIC #150710 — Licensed & Insured</p>
         </div>
       </footer>

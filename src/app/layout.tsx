@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'JosCo Paving LLC — Professional Asphalt & Paving | Anne Arundel County, MD',
+  title: 'J & Son Paving LLC — Professional Asphalt & Paving | Anne Arundel County, MD',
   description:
-    'JosCo Paving LLC delivers premium asphalt driveway paving, commercial parking lots, sealcoating, and custom paving solutions throughout Anne Arundel County, Maryland.',
+    'J & Son Paving LLC delivers premium asphalt driveway paving, commercial parking lots, sealcoating, and custom paving solutions throughout Anne Arundel County, Maryland.',
   keywords: 'asphalt paving, driveway paving, sealcoating, commercial parking lot, Anne Arundel County, Maryland',
 };
 
