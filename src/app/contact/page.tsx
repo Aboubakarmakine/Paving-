@@ -17,42 +17,7 @@ const faqs = [
 ];
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', address: '', service: '', message: '' });
-  const [sent, setSent] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      const res = await fetch("https://formsubmit.co/ajax/jandsonpavingllc@yahoo.com", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          _subject: "New Estimate Request (Contact Page)",
-          name: form.name,
-          phone: form.phone,
-          email: form.email || "Not provided",
-          address: form.address || "Not provided",
-          service: form.service || "Not specified",
-          message: form.message || "Not provided",
-        })
-      });
-      if (res.ok) {
-        setSent(true);
-      } else {
-        alert("There was an issue sending your request. Please call us directly at (443) 875-1714.");
-      }
-    } catch (err) {
-      alert("Connection error. Please call us directly at (443) 875-1714.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -142,68 +107,16 @@ export default function ContactPage() {
           {/* Form */}
           <div className={styles.formCard}>
             <div className={styles.formHeader}>
-              <h3>Request a Free Estimate</h3>
-              <p>We respond same-day, usually within the hour.</p>
+              <h3>Book a Free Estimate</h3>
+              <p>Pick a time that works for you. It's quick and easy!</p>
             </div>
-            {sent ? (
-              <div className={styles.formSent}>
-                <div className={styles.sentIcon}>✅</div>
-                <h4>Request Received!</h4>
-                <p>We'll be in touch shortly. For immediate help, call <a href="tel:4438751714">(443) 875-1714</a>.</p>
-              </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className={styles.form}
-              >
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label>Full Name *</label>
-                    <input required type="text" placeholder="John Smith"
-                      value={form.name} onChange={e => setForm(p => ({...p, name: e.target.value}))} />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label>Phone *</label>
-                    <input required type="tel" placeholder="(443) 000-0000"
-                      value={form.phone} onChange={e => setForm(p => ({...p, phone: e.target.value}))} />
-                  </div>
-                </div>
-                <div className={styles.formGroup}>
-                  <label>Email Address</label>
-                  <input type="email" placeholder="you@email.com"
-                    value={form.email} onChange={e => setForm(p => ({...p, email: e.target.value}))} />
-                </div>
-                <div className={styles.formGroup}>
-                  <label>Property Address</label>
-                  <input type="text" placeholder="123 Main St, Annapolis, MD"
-                    value={form.address} onChange={e => setForm(p => ({...p, address: e.target.value}))} />
-                </div>
-                <div className={styles.formGroup}>
-                  <label>Service Needed</label>
-                  <select value={form.service} onChange={e => setForm(p => ({...p, service: e.target.value}))}>
-                    <option value="">Select a service…</option>
-                    <option>Driveway Paving (New Installation)</option>
-                    <option>Driveway Repaving / Resurfacing</option>
-                    <option>Commercial Parking Lot</option>
-                    <option>Sealcoating</option>
-                    <option>Crack Filling / Repairs</option>
-                    <option>Concrete Work</option>
-                    <option>Other / Not Sure</option>
-                  </select>
-                </div>
-                <div className={styles.formGroup}>
-                  <label>Project Details</label>
-                  <textarea rows={4} placeholder="Describe your project — size, current condition, anything else we should know…"
-                    value={form.message} onChange={e => setForm(p => ({...p, message: e.target.value}))} />
-                </div>
-                <button type="submit" className={styles.formBtn} disabled={isSubmitting}>
-                  {isSubmitting ? 'Sending Request...' : 'Send Request for Free Estimate →'}
-                </button>
-                <p className={styles.formNote}>
-                  Or call us directly: <a href="tel:4438751714" className={styles.formPhone}>(443) 875-1714</a>
-                </p>
-              </form>
-            )}
+            <iframe 
+              src="https://calendly.com/jnsonpaving-info/30min" 
+              width="100%" 
+              height="700" 
+              frameBorder="0" 
+              style={{ borderRadius: '12px', border: '1px solid #e5e7eb', marginTop: '24px' }}
+            ></iframe>
           </div>
         </div>
       </section>
